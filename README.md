@@ -98,3 +98,4 @@ Because this repository is a **monorepo** (it contains both `hardhat` and `web` 
 ## Acknowledgments
 Built during the Ritual Chain Workshop.
 # ritual-chain-workshop
+# ritual-chain-workshop
