@@ -4,7 +4,7 @@ import { buildJudgeAllLlmInput } from "../web/src/lib/ritualLlm.ts";
 
 async function main() {
   const account = "0xC041a38fEa40dbBD93786BfE553944a20c0eeF01";
-  const target = "0x225774C8f359659706dA7EBF48C8f5e2620D69c2";
+  const target = "0xA87aB5EFA511d4a20a9fa8BD373Bd1b2e068b741";
   const executor = "0xB42e435c4252A5a2E7440e37B609F00c61a0c91B";
   const bountyId = 1n;
 

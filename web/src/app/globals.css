@@ -517,6 +517,87 @@ body {
   position: relative;
 }
 
+.phase-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(157, 126, 255, 0.18);
+  background: linear-gradient(135deg, rgba(17, 13, 35, 0.92), rgba(28, 20, 61, 0.72));
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.24);
+}
+
+.phase-badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  flex: 0 0 auto;
+}
+
+.phase-badge-title {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.phase-badge-copy {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  opacity: 0.7;
+}
+
+.phase-badge--commit-open {
+  border-color: rgba(34, 197, 94, 0.3);
+  background: linear-gradient(135deg, rgba(16, 40, 28, 0.92), rgba(20, 52, 34, 0.74));
+}
+
+.phase-badge--commit-open .phase-badge-icon {
+  background: rgba(34, 197, 94, 0.15);
+}
+
+.phase-badge--reveal-open {
+  border-color: rgba(168, 85, 247, 0.3);
+  background: linear-gradient(135deg, rgba(46, 26, 68, 0.92), rgba(54, 24, 92, 0.74));
+}
+
+.phase-badge--reveal-open .phase-badge-icon {
+  background: rgba(168, 85, 247, 0.15);
+}
+
+.phase-badge--judging-ready {
+  border-color: rgba(245, 158, 11, 0.3);
+  background: linear-gradient(135deg, rgba(58, 37, 12, 0.92), rgba(74, 48, 18, 0.74));
+}
+
+.phase-badge--judging-ready .phase-badge-icon {
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.phase-badge--judged {
+  border-color: rgba(99, 102, 241, 0.3);
+  background: linear-gradient(135deg, rgba(30, 30, 61, 0.92), rgba(36, 38, 79, 0.74));
+}
+
+.phase-badge--judged .phase-badge-icon {
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.phase-badge--finalized {
+  border-color: rgba(120, 119, 198, 0.3);
+  background: linear-gradient(135deg, rgba(28, 28, 39, 0.92), rgba(41, 43, 56, 0.74));
+}
+
+.phase-badge--finalized .phase-badge-icon {
+  background: rgba(120, 119, 198, 0.15);
+}
+
 .hero-copy {
   text-align: left;
 }
@@ -585,7 +666,10 @@ body {
 }
 
 .hero-panel {
-  background: rgba(22, 7, 50, 0.88);
+  background:
+    radial-gradient(circle at top left, rgba(157,126,255,0.26), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(0,255,136,0.13), transparent 24%),
+    rgba(22, 7, 50, 0.88);
   border: 1px solid rgba(157,126,255,0.16);
   border-radius: 28px;
   padding: 28px;
@@ -594,6 +678,16 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255,255,255,0.04), transparent);
+  pointer-events: none;
 }
 
 .hero-panel-header {
@@ -618,10 +712,17 @@ body {
 }
 
 .stat-card {
-  background: rgba(255,255,255,0.02);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.012));
   border: 1px solid rgba(157,126,255,0.12);
   border-radius: 18px;
   padding: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(157,126,255,0.35);
+  box-shadow: 0 0 0 1px rgba(157,126,255,0.08), 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .stat-value {

@@ -63,22 +63,16 @@ export function BountyView({ bountyId }: { bountyId: bigint }) {
   return (
     <div className="space-y-4">
       {/* Phase banner */}
-      <div className={`rounded-xl px-4 py-2.5 text-sm font-medium flex items-center gap-2
-        ${status === "commit-open"    ? "bg-green-500/10 text-green-300 ring-1 ring-green-500/20" : ""}
-        ${status === "reveal-open"    ? "bg-violet-500/10 text-violet-300 ring-1 ring-violet-500/20" : ""}
-        ${status === "judging-ready"  ? "bg-amber-500/10 text-amber-300 ring-1 ring-amber-500/20" : ""}
-        ${status === "judged"         ? "bg-indigo-500/10 text-indigo-300 ring-1 ring-indigo-500/20" : ""}
-        ${status === "finalized"      ? "bg-zinc-500/10 text-zinc-300 ring-1 ring-zinc-500/20" : ""}
-      `}>
-        <span className="text-lg">
+      <div className={`phase-badge phase-badge--${status}`} data-status={status}>
+        <span className="phase-badge-icon" aria-hidden="true">
           {status === "commit-open"   ? "🔒" :
            status === "reveal-open"   ? "🔓" :
            status === "judging-ready" ? "⚖️" :
            status === "judged"        ? "🤖" : "🏆"}
         </span>
         <div>
-          <span className="font-semibold">{statusMeta.label}</span>
-          <span className="ml-2 font-normal opacity-70">
+          <span className="phase-badge-title">{statusMeta.label}</span>
+          <span className="phase-badge-copy">
             {status === "commit-open"   && "Submit your commitment hash before the deadline."}
             {status === "reveal-open"   && "The commit window is closed. Reveal your answer now."}
             {status === "judging-ready" && "Reveal window closed. Owner can trigger AI judging."}

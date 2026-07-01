@@ -79,38 +79,42 @@ export default function Home() {
               </h1>
 
               <p className="hero-subtitle">
-                Submit answers to a bounty. After the deadline, Ritual AI ranks
-                all submissions. The bounty owner finalizes the winner.
+                Create a bounty, collect private submissions, and let Ritual AI
+                provide an advisory ranking before the owner finalizes the winner.
               </p>
 
               <div className="hero-pills">
-                <span className="hero-pill">⬡ AI review is advisory</span>
-                <span className="hero-pill">◈ Commit-reveal privacy</span>
-                <span className="hero-pill">◎ One winner per bounty</span>
-                <span className="hero-pill">⟁ On-chain settlement</span>
+                <span className="hero-pill">⬡ Advisory AI review</span>
+                <span className="hero-pill">◈ Private commit-reveal</span>
+                <span className="hero-pill">◎ Owner-led settlement</span>
+                <span className="hero-pill">⟁ On-chain payout flow</span>
               </div>
             </div>
 
             <aside className="hero-panel">
-              <div className="hero-panel-header">Ritual Snapshot</div>
+              <div className="hero-panel-header">Workflow Snapshot</div>
               <div className="hero-panel-body">
                 <p className="hero-panel-copy">
-                  Launch bounties, submit privately, and trust AI-assisted
-                  ranking with an immersive on-chain experience.
+                  Launch a bounty, hide submissions during commitment, then reveal,
+                  judge, and settle with a clear audit trail.
                 </p>
 
                 <div className="hero-stat-grid">
                   <div className="stat-card">
                     <div className="stat-value">Commit</div>
-                    <div className="stat-label">Reveal workflow</div>
+                    <div className="stat-label">Private hash submission</div>
                   </div>
                   <div className="stat-card">
-                    <div className="stat-value">Secure</div>
-                    <div className="stat-label">Proof-of-concept UI</div>
+                    <div className="stat-value">Judge</div>
+                    <div className="stat-label">AI advisory review</div>
                   </div>
                   <div className="stat-card">
-                    <div className="stat-value">Fast</div>
-                    <div className="stat-label">Instant preview</div>
+                    <div className="stat-value">Reveal</div>
+                    <div className="stat-label">Open answer verification</div>
+                  </div>
+                  <div className="stat-card">
+                    <div className="stat-value">Settle</div>
+                    <div className="stat-label">Winner payout flow</div>
                   </div>
                 </div>
               </div>

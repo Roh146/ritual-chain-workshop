@@ -19,7 +19,7 @@ const client = createPublicClient({
 
 async function main() {
   const account = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"; // just an example
-  const target = "0x225774C8f359659706dA7EBF48C8f5e2620D69c2";
+  const target = "0xA87aB5EFA511d4a20a9fa8BD373Bd1b2e068b741";
   
   const block = await client.getBlock();
   console.log("Current block timestamp:", block.timestamp);
